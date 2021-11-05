@@ -6,7 +6,7 @@ import {
   Pagination
 } from '@material-ui/core';
 import ProductListToolbar from '../components/product/ProductListToolbar';
-import ProductCard from '../components/product/ProductCard';
+// import ProductCard from '../components/product/ProductCard';
 import products from '../__mocks__/products';
 
 const ProductList = () => (
@@ -36,7 +36,7 @@ const ProductList = () => (
                 md={6}
                 xs={12}
               >
-                <ProductCard product={product} />
+                {/* <ProductCard product={product} /> */}
               </Grid>
             ))}
           </Grid>

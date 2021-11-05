@@ -27,7 +27,7 @@ const ProductListToolbar = (props) => (
         color="primary"
         variant="contained"
       >
-        Add product
+        Add
       </Button>
     </Box>
     <Box sx={{ mt: 3 }}>

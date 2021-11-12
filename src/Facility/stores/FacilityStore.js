@@ -10,10 +10,18 @@ class FacilityStore {
         // facility = this.facility_AminStore.facility
         // facilities = this.facility_AminStore.facilities
 
-        facility = {id:"1", name:"", location:"", number:""}
+        facility = {id:"", name:"", location:"", number:""}
         facilities = []
-        room = {id:"", facility_id:"" , room_loc:""}
+
+        // room = {id:"", facility_id:"" , room_loc:""}
+        room = {id:"", room_loc:""}
         rooms = []
+
+        adminster = {id:"", facility_id:"", password:""}
+        adminsters = []
+    
+        bed = {id:"", room_id:"" , camera_id:""}
+        beds = []
 
         nurse = { id:"",
               admin_id:"",
@@ -53,7 +61,7 @@ class FacilityStore {
     async selectFacilityRoom(){
             // 시설 id에 맞는 병실들 가져오기 
         try{
-                const results =  await FacilityApi.facilityRoomList(this.facility.id);
+                const results =  await FacilityApi.facilityRoomList();
                 runInAction(()=> this.rooms = results) // 병실들 (rooms) 가져오기 ,,,
                 console.log(results)
          }catch(error){

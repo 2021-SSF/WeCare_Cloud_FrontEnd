@@ -1,10 +1,11 @@
 import axios from 'axios'
 
 class FacilityApi{
-    URL = 'api/facility/';
+    URL = '/api/facility/';
 
-    facilityRoomList(){
-        return axios.get(this.URL)
+    facilityRoomList(facility_id){ // '<str:facility_id>/'
+        console.log(facility_id);
+        return axios.get(this.URL + `${facility_id}/`)
                 .then((response)=>response.data);
     }
 

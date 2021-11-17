@@ -9,28 +9,18 @@ class FacilityApi{
                 .then((response)=>response.data);
     }
 
-    facilityDetail( room_id ){   // '<str:facility_id>/room/<int:room_id>/'
-        return axios.get(this.URL + `/room/${room_id}/`)
+    facilityDetail(room_id){   // '<str:facility_id>/room/<int:room_id>/'
+        return axios.get(this.URL + `rooms/${room_id}/`)
                     .then((response)=>response.data);
     }
 
-    eldersAdd(){
-
-    }
-
-    dietAdd(){
-
-    }
-
-    eldersUpdate(){
-
-    }
-    
-    eldersDelete(elders_id ){ // '<str:facility_id>/elders/delete/<str:elders_id>/'
-        return axios.delete(this.URL + `/elders/delete/${elders_id}/`)
+    elderDetail(room_id , elder_id){
+        return axios.get(this.URL + `rooms/${room_id}/elder/${elder_id}/`)
                     .then((response)=>response.data);
-
     }
+
+    // elderStatus_Create()
+
 }
 
 export default new FacilityApi();

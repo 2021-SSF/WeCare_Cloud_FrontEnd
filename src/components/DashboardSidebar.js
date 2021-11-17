@@ -80,7 +80,7 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
       }}
     >
       <Box sx={{ p: 5 }}>
-        <h2>&nbsp;&nbsp;&nbsp;ㅇㅇ 병원</h2>
+        <h2>&nbsp;멀캠요양시설</h2>
       </Box>
 
       <Divider />

@@ -15,10 +15,10 @@ class FacilityRoomListContainer extends Component {
   }
 
   render() {
-    const { rooms } = this.facilityStore
+    const { rooms, goFacilityDetail } = this.facilityStore
     const roomList = rooms.map(room => {
       return (
-        <FacilityRoomListView key={room.id} room={room} />
+        <FacilityRoomListView key={room.id} room={room} goFacilityDetail={goFacilityDetail} />
       )
     });
     return (

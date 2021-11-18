@@ -13,12 +13,16 @@ import Grid from '@mui/material/Grid';
 export default class FacilityRoomListView extends Component {
   render() {
     // eslint-disable-next-line react/prop-types
-    const { room, goFacilityDetail } = this.props;
+    const { room, goFacilityDetail, selectFacilityDetail , seperateBoard  } = this.props;
     return (
       <Grid>
       <div>
 
-      <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} onClick={() => goFacilityDetail(room.id)}> 
+      <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} onClick={() => selectFacilityDetail(room)}> 
+      
+      {/* <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} onClick={() => seperateBoard(room.id)}>  */}
+      {/* <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} onClick={() => goFacilityDetail(room.id)}>  */}
+
         {/* sx={{ flexGrow: 1 }} */}
    <CardActionArea>
      <CardContent sx={{ flexGrow: 1 }}>
@@ -26,7 +30,7 @@ export default class FacilityRoomListView extends Component {
        병실 : {room.room_loc}
        </Typography><br/>
        <Typography variant="body2" color="text.secondary">
-      인원 : ?
+      인원 : 
        </Typography>
      </CardContent>
    </CardActionArea>

@@ -11,7 +11,10 @@ import NotFound from './pages/NotFound';
 import ProductList from './pages/ProductList';
 import Register from './pages/Register';
 import Settings from './pages/Settings';
-import FacilityDetailContainer from './Facility/containers/FacilityDetailContainer';
+import FacilityDetailContainer from './Facility/containers/FacilityDetailContainer'; 
+import EldersDetailContainer from './Facility/containers/EldersDetailContainer';
+
+// import SeperateBoardList from './Facility/pages/SeperateBoardList';
 
 const routes = [
   {
@@ -45,6 +48,7 @@ const routes = [
 
       // { path: 'rooms/:room_id/', element: <FacilityDetailDashboard /> },
       { path: 'rooms/:room_id/', element: <FacilityDetailContainer /> },
+      { path: 'rooms/:room_id/elder/:elder_id/', element: <EldersDetailContainer/>}
     ]
   },
 

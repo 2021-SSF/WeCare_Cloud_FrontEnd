@@ -31,23 +31,23 @@ const items = [
   {
     href: '/app/dashboard',
     icon: BarChartIcon,
-    title: 'Dashboard'
+    title: 'Rooms'
   },
-  {
-    href: '/app/customers',
-    icon: UsersIcon,
-    title: 'Customers'
-  },
-  {
-    href: '/app/products',
-    icon: ShoppingBagIcon,
-    title: 'Products'
-  },
-  {
-    href: '/app/account',
-    icon: UserIcon,
-    title: 'Account'
-  },
+  // {
+  //   href: '/app/customers',
+  //   icon: UsersIcon,
+  //   title: 'Customers'
+  // },
+  // {
+  //   href: '/app/products',
+  //   icon: ShoppingBagIcon,
+  //   title: 'Products'
+  // },
+  // {
+  //   href: '/app/account',
+  //   icon: UserIcon,
+  //   title: 'Account'
+  // },
   {
     href: '/app/settings',
     icon: SettingsIcon,

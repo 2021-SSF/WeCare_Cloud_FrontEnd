@@ -31,8 +31,8 @@ const FacilityRoomListDashboard = () => (
           <Grid item xs={9} sm={9}>
           <FacilityDetailContainer/>
           </Grid>
-{/* 
-          <Grid item xs={9} sm={9}>
+
+          {/* <Grid item xs={9} sm={9}>
           <EldersDetailContainer/>
           </Grid> */}
 

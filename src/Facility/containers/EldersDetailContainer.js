@@ -8,10 +8,10 @@ class EldersDetailContainer extends Component {
   facilityStore = FacilityStore ;
 
   render() {
-    const { elder} = this.facilityStore
+    const { elder , goBack} = this.facilityStore
     return (
       <div>
-      <EldersDetailView elder={elder}   />
+      <EldersDetailView elder={elder} goBack={goBack} />
 
     </div>
     );

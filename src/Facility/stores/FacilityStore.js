@@ -19,7 +19,7 @@ class FacilityStore {
         elderStatuses = []
 
         // elederNumber = this.elder.length()
-    
+
 
     constructor(){
       makeAutoObservable(this, {}, {autoBind:true})

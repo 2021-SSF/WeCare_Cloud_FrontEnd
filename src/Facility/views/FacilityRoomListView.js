@@ -13,7 +13,7 @@ import Grid from '@mui/material/Grid';
 export default class FacilityRoomListView extends Component {
   render() {
     // eslint-disable-next-line react/prop-types
-    const { room, goFacilityDetail, selectFacilityDetail , seperateBoard  } = this.props;
+    const { room, goFacilityDetail, selectFacilityDetail , seperateBoard ,elders } = this.props;
     return (
       <Grid>
       <div>
@@ -28,10 +28,11 @@ export default class FacilityRoomListView extends Component {
      <CardContent sx={{ flexGrow: 1 }}>
        <Typography gutterBottom variant="h5" component="div">
        병실 : {room.room_loc}
-       </Typography><br/>
-       <Typography variant="body2" color="text.secondary">
-      인원 : 
        </Typography>
+       {/* <br/> */}
+       {/* <Typography variant="body2" color="text.secondary">
+      인원 : 
+       </Typography> */}
      </CardContent>
    </CardActionArea>
  </Card> <br/>

@@ -80,7 +80,7 @@ export default function FacilityDetailView() {
     )});
   return (
     <div>
-      병실 : {room.room_loc}
+
       {elderList} 
       <Modal
         open={open}

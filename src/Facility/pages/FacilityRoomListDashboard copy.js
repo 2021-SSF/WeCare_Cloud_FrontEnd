@@ -1,10 +1,16 @@
 import { Helmet } from 'react-helmet';
 import { Box, Container, Grid } from '@material-ui/core';
+import FacilityRoomListContainer from '../containers/FacilityRoomListContainer';
+import FacilityDetailContainer from '../containers/FacilityDetailContainer';
+import FacilityStore from '../stores/FacilityStore';
 
-const Dashboard = () => (
+const facilityStore = FacilityStore
+const FacilityRoomListDashboard = () => (
   <>
+
+
     <Helmet>
-      <title>Dashboard | Material Kit</title>
+      <title>FacilityRoomList</title>
     </Helmet>
     <Box
       sx={{
@@ -16,9 +22,9 @@ const Dashboard = () => (
       <Container maxWidth={false}>
         <Grid
           container
-          spacing={3}
+          // spacing={3}
         >
-          여기에 뭐가써지니
+          <FacilityRoomListContainer />
           {/* <Grid
             item
             lg={3}
@@ -38,9 +44,11 @@ const Dashboard = () => (
           </Grid> */}
 
         </Grid>
+        {/* {(facilityStore.room.id !== undefined && facilityStore.room.id > 0) && <FacilityDetailContainer/>} */}
+        <FacilityDetailContainer/>
       </Container>
     </Box>
   </>
 );
 
-export default Dashboard;
+export default FacilityRoomListDashboard;

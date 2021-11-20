@@ -31,23 +31,23 @@ const items = [
   {
     href: '/app/dashboard',
     icon: BarChartIcon,
-    title: 'Dashboard'
+    title: 'Rooms'
   },
-  {
-    href: '/app/customers',
-    icon: UsersIcon,
-    title: 'Customers'
-  },
-  {
-    href: '/app/products',
-    icon: ShoppingBagIcon,
-    title: 'Products'
-  },
-  {
-    href: '/app/account',
-    icon: UserIcon,
-    title: 'Account'
-  },
+  // {
+  //   href: '/app/customers',
+  //   icon: UsersIcon,
+  //   title: 'Customers'
+  // },
+  // {
+  //   href: '/app/products',
+  //   icon: ShoppingBagIcon,
+  //   title: 'Products'
+  // },
+  // {
+  //   href: '/app/account',
+  //   icon: UserIcon,
+  //   title: 'Account'
+  // },
   {
     href: '/app/settings',
     icon: SettingsIcon,
@@ -62,11 +62,6 @@ const items = [
     href: '/register',
     icon: UserPlusIcon,
     title: 'Register'
-  },
-  {
-    href: '/404',
-    icon: AlertCircleIcon,
-    title: 'Error'
   }
 ];
 
@@ -80,7 +75,7 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
       }}
     >
       <Box sx={{ p: 5 }}>
-        <h2>&nbsp;&nbsp;&nbsp;ㅇㅇ 병원</h2>
+        <h2>&nbsp;멀캠요양시설</h2>
       </Box>
 
       <Divider />

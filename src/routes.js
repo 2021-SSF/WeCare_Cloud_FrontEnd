@@ -10,6 +10,8 @@ import ProductList from './pages/ProductList';
 import Register from './pages/Register';
 import Settings from './pages/Settings';
 
+// -----
+
 const routes = [
   {
     path: 'app',

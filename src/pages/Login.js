@@ -13,10 +13,13 @@ import {
 } from '@material-ui/core';
 import FacebookIcon from '../icons/Facebook';
 import GoogleIcon from '../icons/Google';
+// ----
+import LoginStore from '../store/LoginStore';
+import axios from 'axios';
 
 const Login = () => {
   const navigate = useNavigate();
-
+  const loginstore =LoginStore;
   return (
     <>
       <Helmet>
@@ -34,15 +37,34 @@ const Login = () => {
         <Container maxWidth="sm">
           <Formik
             initialValues={{
-              email: 'demo@devias.io',
-              password: 'Password123'
+              email: '',
+              password: ''
             }}
             validationSchema={Yup.object().shape({
-              email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
+              email: Yup.string().max(255).required('email is required'),
               password: Yup.string().max(255).required('Password is required')
             })}
-            onSubmit={() => {
-              navigate('/app/dashboard', { replace: true });
+            onSubmit={(event) => {
+              axios.post('http://localhost:8000/login/', {
+                username: values.email,
+                password: values.password
+              }).then(function (res) {
+                localStorage.setItem('token', res.data.token);
+                console.log(res)
+
+                localStorage.setItem('user', values.email);
+                localStorage.setItem('id', res.data.user.id);
+                localStorage.setItem('firstname', res.data.user.first_name)
+                localStorage.setItem('lastname', res.data.user.last_name)
+                loginstore.setToken(res.data.token);
+                loginstore.setUser(res.data.user.id, res.data.user.username, res.data.user.first_name, res.data.user.last_name);
+                loginstore.userHasAuthenticated(true);
+                navigate('/login', { replace: true });
+              }).catch(function (err) {
+                console.log(err)
+                alert("아이디와 비밀번호를 확인하세요");
+              })
+              event.preventDefault();
             }}
           >
             {({
@@ -124,7 +146,7 @@ const Login = () => {
                   error={Boolean(touched.email && errors.email)}
                   fullWidth
                   helperText={touched.email && errors.email}
-                  label="Email Address"
+                  label="email"
                   margin="normal"
                   name="email"
                   onBlur={handleBlur}

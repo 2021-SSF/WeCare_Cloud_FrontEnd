@@ -1,5 +1,6 @@
 // import { useEffect } from 'react';
 // import { Link as useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import {
   Box,
@@ -71,6 +72,40 @@ const items = [
 ];
 
 const DashboardSidebar = ({ onMobileClose, openMobile }) => {
+  const [userprofile, setUserprofile] = useState(false)
+  const [userPhoto, setUserPhoto] = useState();
+
+  useEffect(()=>{
+    fetch('http://localhost:8000/user/current/', {
+      headers: {
+        Authorization: `JWT ${localStorage.getItem('token')}`
+      }
+    })
+    .then(res => res.json())
+    .then(json => {
+      // 현재 유저 정보 받아왔다면, 로그인 상태로 state 업데이트 하고
+      if (json.id) {
+        //유저정보를 받아왔으면 해당 user의 프로필을 받아온다.
+    }fetch('http://localhost:8000/user/auth/profile/' + json.id + '/update/',{
+            method : 'PATCH',
+            headers: {
+                Authorization: `JWT ${localStorage.getItem('token')}`
+            },
+        })
+        .then((res)=>res.json())
+        .then((userData)=> {
+            setUserPhoto(userData.photo)
+        })
+        .catch(error => {
+            console.log(error);
+          });;
+    }).catch(error => {
+        console.log(error)
+      });
+},[userPhoto])
+
+
+
   const content = (
     <Box
       sx={{
@@ -80,7 +115,7 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
       }}
     >
       <Box sx={{ p: 5 }}>
-        <h2>&nbsp;&nbsp;&nbsp;ㅇㅇ 병원</h2>
+        <h2>&nbsp;&nbsp;&nbsp;</h2>
       </Box>
 
       <Divider />

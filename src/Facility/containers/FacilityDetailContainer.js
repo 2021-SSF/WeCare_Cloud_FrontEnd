@@ -12,7 +12,7 @@ class FacilityDetailContainer extends Component {
   // }
 
   render() {
-    const {elders , room , goBack,selectFacilityDetail , goElderDetail , selectElderDetail} = this.facilityStore
+    const {elders , room , goBack,selectFacilityDetail , goElderDetail , selectElderDetail , getViolence} = this.facilityStore
 
     // const elderList = elders.map(elder => {
     //   return (
@@ -23,7 +23,7 @@ class FacilityDetailContainer extends Component {
     return (
       <div>
        
-        <FacilityDetailView selectFacilityDetail= {selectFacilityDetail} selectElderDetail={selectElderDetail} room ={room} elders={elders} goBack= {goBack} goElderDetail={goElderDetail}/>
+        <FacilityDetailView selectFacilityDetail= {selectFacilityDetail} selectElderDetail={selectElderDetail} room ={room} getViolence={getViolence} elders={elders} goBack= {goBack} goElderDetail={goElderDetail}/>
        {/* <h1> 병실 : </h1> <br/> <br/> <br/> */}
         {/* {elderList}  */}
         {/*환자 리스트 뿌려주는 곳*/}

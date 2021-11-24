@@ -42,7 +42,7 @@ export default function FacilityDetailView() {
   const handleClose = () => setOpen(false);
 
   const facilityStore = FacilityStore
-  const { elders, room, goElderDetail , selectElderDetail} = facilityStore
+  const { elders, room, goElderDetail , selectElderDetail, getViolence} = facilityStore
   const elderList = elders.map(elder => {
     return (
       <Grid key={elder.id} xs={12} sm={6} md={4} onClick={handleOpen}>
@@ -82,6 +82,8 @@ export default function FacilityDetailView() {
     <div>
 
       {elderList} 
+      {/* {()=>getViolence(this.elder.room_id)} */}
+
       <Modal
         open={open}
         onClose={handleClose}

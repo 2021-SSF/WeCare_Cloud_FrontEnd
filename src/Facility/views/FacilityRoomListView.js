@@ -13,7 +13,7 @@ import Grid from '@mui/material/Grid';
 export default class FacilityRoomListView extends Component {
   render() {
     // eslint-disable-next-line react/prop-types
-    const { room, goFacilityDetail, selectFacilityDetail , seperateBoard ,elders } = this.props;
+    const { room, goFacilityDetail, selectFacilityDetail , seperateBoard ,elders,getViolence,violenceList } = this.props;
     return (
       <Grid>
       <div>

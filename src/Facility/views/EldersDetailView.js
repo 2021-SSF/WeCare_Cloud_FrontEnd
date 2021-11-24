@@ -26,7 +26,7 @@ export default function EldersDetailView() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const facilityStore = FacilityStore
-  const { elder, goBack , room} = facilityStore;
+  const { elder, goBack , room, elderStatuses} = facilityStore;
   // const { elder, goBack} = this.props;
 
 

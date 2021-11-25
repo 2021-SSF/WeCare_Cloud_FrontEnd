@@ -13,12 +13,20 @@ import Grid from '@mui/material/Grid';
 export default class FacilityRoomListView extends Component {
   render() {
     // eslint-disable-next-line react/prop-types
-    const { room, goFacilityDetail, selectFacilityDetail , seperateBoard ,elders,getViolence,violenceList } = this.props;
+    const { room, goFacilityDetail, selectFacilityDetail , seperateBoard ,elders,getViolence } = this.props;
+    
+
+    const selectRoom = (room)=> {
+      getViolence(room)
+      selectFacilityDetail(room)
+    }
     return (
       <Grid>
       <div>
 
-      <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} onClick={() => selectFacilityDetail(room)}> 
+      <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} onClick={() => selectRoom(room)}> 
+      {/* <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} onClick={() => selectFacilityDetail(room)}>  */}
+
       
       {/* <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} onClick={() => seperateBoard(room.id)}>  */}
       {/* <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} onClick={() => goFacilityDetail(room.id)}>  */}

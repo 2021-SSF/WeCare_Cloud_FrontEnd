@@ -53,48 +53,11 @@ export default function EldersDetailView() {
               <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                   주의사항 : {elder.recent_problem} 
               </Typography> <br/>
-
-          {/* 이름 : {elder.name}<br/>
-          나이 : {elder.age} <br/>
-          성별 : {elder.gender} <br/>
-          특이사항 : {elder.sickness} <br/>
-          주의사항 : {elder.recent_problem} <br/> */}
  
                   <Button fullWidth onClick={()=>goBack()} >Exit</Button>
           </Grid> 
         </div>
-    //  <div onClick={handleOpen}>
-    //    <Modal
-    //     open={open}
-    //     onClose={handleClose}
-    //     aria-labelledby="modal-modal-title"
-    //     aria-describedby="modal-modal-description"
-    //   >
-          // <Box sx={style}>
-            //  <Typography id="modal-modal-title" variant="h6" component="h2">
-            //       이름 : {facilityStore.elder.name}
-            //  </Typography>     
 
-            //   <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            //       나이 : {elder.age} 
-            //   </Typography>
-
-            //   <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            //       성별 : {elder.gender} 
-            //   </Typography>  
-
-            //   <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            //       특이사항 : {elder.sickness}  
-            //   </Typography>   
-
-            //   <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            //       주의사항 : {elder.recent_problem} 
-            //   </Typography>
-          //     <button onClick={()=>goBack()}>뒤로가기</button>
-          //  </Box>
-    //     </Modal> 
-
-    //   </div>
   )
 }
 

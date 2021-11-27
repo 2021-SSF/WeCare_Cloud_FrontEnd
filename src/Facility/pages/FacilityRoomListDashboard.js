@@ -24,12 +24,16 @@ const FacilityRoomListDashboard = () => (
 
         <Grid container spacing={3}>
 
-          <Grid item xs={3} sm={3}>
+          <Grid item xs={2} sm={2}>
           <FacilityRoomListContainer />
           </Grid>
           
-          <Grid item xs={9} sm={9}>
+          <Grid item xs={7} sm={7}>
           <FacilityDetailContainer/>
+          </Grid>
+
+          <Grid item xs={3} sm={3}>
+          여기는 그래프
           </Grid>
 
           {/* <Grid item xs={9} sm={9}>

@@ -74,10 +74,11 @@ class FacilityStore {
                         console.log(error);
                 }
         }
-        async getViolence(){
+        async getViolence(room){
                 // 방별 폭력 그래프
-                try{
-                        const fight = await FacilityApi.getViolence(this.room.id)
+                try{    
+                        console.log("룸아이디는 ====>", room.id)
+                        const fight = await FacilityApi.incidentList(room.id)
                         runInAction(() => this.violenceList = fight)
                         console.log(fight)
 

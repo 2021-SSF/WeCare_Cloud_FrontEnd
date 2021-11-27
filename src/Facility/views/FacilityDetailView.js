@@ -42,7 +42,7 @@ export default function FacilityDetailView() {
   const handleClose = () => setOpen(false);
 
   const facilityStore = FacilityStore
-  const { elders, room, goElderDetail , selectElderDetail} = facilityStore
+  const { elders, room, goElderDetail , selectElderDetail, violenceList} = facilityStore
   const elderList = elders.map(elder => {
     return (
       <Grid key={elder.id} xs={12} sm={6} md={4} onClick={handleOpen}>
@@ -81,7 +81,9 @@ export default function FacilityDetailView() {
   return (
     <div>
 
-      {elderList} 
+      {elderList}
+      
+      {violenceList} 
       <Modal
         open={open}
         onClose={handleClose}
@@ -90,25 +92,6 @@ export default function FacilityDetailView() {
       >
           <Box sx={style}>
             <EldersDetailContainer/>
-          {/* <Typography id="modal-modal-title" variant="h6" component="h2">
-                  이름 : {facilityStore.elder.name}
-             </Typography>     
-
-              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                  나이 : {facilityStore.elder.age} 
-              </Typography>
-
-              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                  성별 : {facilityStore.elder.gender} 
-              </Typography>  
-
-              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                  특이사항 : {facilityStore.elder.sickness}  
-              </Typography>   
-
-              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                  주의사항 : {facilityStore.elder.recent_problem} 
-              </Typography> */}
         </Box>
       </Modal>
     </div>

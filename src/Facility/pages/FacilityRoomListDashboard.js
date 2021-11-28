@@ -5,6 +5,7 @@ import FacilityDetailContainer from '../containers/FacilityDetailContainer';
 import FacilityStore from '../stores/FacilityStore';
 import EldersDetailContainer from '../containers/EldersDetailContainer';
 import ViolenceGraphContainer from '../containers/ViolenceGraphContainer';
+import ViolenceListGraph from '../views/ViolenceListGraph';
 
 const facilityStore = FacilityStore
 const FacilityRoomListDashboard = () => (
@@ -29,12 +30,11 @@ const FacilityRoomListDashboard = () => (
           <FacilityRoomListContainer />
           </Grid>
           
-          <Grid item xs={7} sm={7}>
+          <Grid item xs={6} sm={6}>
           <FacilityDetailContainer/>
           </Grid>
 
-          <Grid item xs={3} sm={3}>
-          여기는 그래프
+          <Grid item xs={4} sm={4}>
           <ViolenceGraphContainer/>
           </Grid>
 

@@ -16,30 +16,14 @@ const FacilityDetailDashboard = () => (
     >
       
       <Container maxWidth={false}>
-        <Grid
+        {/* <Grid
           container
           // spacing={3}
-        >
+        > */}
         <FacilityDetailContainer/>
-          {/* <Grid
-            item
-            lg={3}
-            sm={6}
-            xl={3}
-            xs={12}
-          >
-          </Grid> */}
+          
 
-          {/* <Grid
-            item
-            lg={8}
-            md={12}
-            xl={9}
-            xs={12}
-          >
-          </Grid> */}
-
-        </Grid>
+        {/* </Grid> */}
       </Container>
     </Box>
   </>

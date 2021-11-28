@@ -3,6 +3,9 @@ import { observer } from 'mobx-react';
 
 import TextField from '@mui/material/TextField';
 import FacilityStore from '../stores/FacilityStore';
+// import test from '../views/test';
+import ViolenceListGraph from '../views/ViolenceListGraph';
+
 class ViolenceGraphContainer extends Component{
   facilityStore = FacilityStore ;
   // facility_AdminStore = Facility_AdminStore
@@ -14,20 +17,12 @@ class ViolenceGraphContainer extends Component{
 
   render() {
     const { violenceList} = this.facilityStore
-    const test = violenceList.map(v =>{
-      return(
-        <TextField
-          required
-          id={v.id}
-          label="Required"
-          defaultValue={v.time}
-        />
-      )
-    })
+    
     
     return (
       <div>
-       {test}
+       <ViolenceListGraph violenceList={violenceList}/>
+       
       </div>
     );
   }

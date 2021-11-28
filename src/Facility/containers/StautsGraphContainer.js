@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 
 import TextField from '@mui/material/TextField';
 import FacilityStore from '../stores/FacilityStore';
-import StatusGraphView from '../views/StatusGraphView.js';
+import StatusGraphViewM from '../views/StatusGraphViewM.js';
 class ViolenceGraphContainer extends Component{
   facilityStore = FacilityStore ;
   // facility_AdminStore = Facility_AdminStore
@@ -17,7 +17,7 @@ class ViolenceGraphContainer extends Component{
     const test = elderStatuses.map(s =>{
       return(
         <div>
-          <StatusGraphView elderStatuses ={elderStatuses} elder={elder}/>
+          <StatusGraphViewM elderStatuses ={elderStatuses} elder={elder}/>
         </div>
       )
     })

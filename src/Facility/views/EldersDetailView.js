@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
 import StautsGraphContainer from '../containers/StautsGraphContainer';
-import StatusGraphView from './StatusGraphView';
+import StatusGraphViewM from './StatusGraphViewM';
 
 
 const style = {
@@ -59,7 +59,7 @@ export default function EldersDetailView() {
  
                   <Button fullWidth onClick={()=>goBack()} >Exit</Button>
                   <Box>
-              <StatusGraphView />
+              <StatusGraphViewM />
               </Box>
            
 

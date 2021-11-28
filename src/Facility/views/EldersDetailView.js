@@ -4,6 +4,8 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
+import StautsGraphContainer from '../containers/StautsGraphContainer';
+import StatusGraphView from './StatusGraphView';
 
 
 const style = {
@@ -26,14 +28,15 @@ export default function EldersDetailView() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const facilityStore = FacilityStore
-  const { elder, goBack , room, elderStatuses} = facilityStore;
+  const { elder, goBack , room, elderStatuses,getElderStatus} = facilityStore;
+  getElderStatus(facilityStore.elder)
   // const { elder, goBack} = this.props;
 
 
 
   return (
           <div>
-            <Grid>
+            
             <Typography id="modal-modal-title" variant="h6" component="h1">
                   이름 : {facilityStore.elder.name}
              </Typography>     
@@ -55,7 +58,12 @@ export default function EldersDetailView() {
               </Typography> <br/>
  
                   <Button fullWidth onClick={()=>goBack()} >Exit</Button>
-          </Grid> 
+                  <Box>
+              <StatusGraphView />
+              </Box>
+           
+
+
         </div>
 
   )

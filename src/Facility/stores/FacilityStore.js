@@ -63,12 +63,14 @@ class FacilityStore {
 
 
         }
-        async getElderStatus(){
+        async getElderStatus(elder){
                 // 환자 상태 정보
                 try{
+                        console.log(this.elder.id)
+                        console.log("test_getElderSTuat")
                         const status = await FacilityApi.elderStatus(this.elder.id)
                         runInAction(() => this.elderStatuses = status)
-                        console.log(status)
+                        
 
                 }catch(error){
                         console.log(error);

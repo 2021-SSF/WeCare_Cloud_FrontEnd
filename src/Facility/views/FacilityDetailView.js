@@ -83,7 +83,6 @@ export default function FacilityDetailView() {
 
       {elderList}
       
-      {violenceList} 
       <Modal
         open={open}
         onClose={handleClose}

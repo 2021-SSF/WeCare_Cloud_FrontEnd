@@ -7,7 +7,27 @@ class StatusGraphViewM extends Component {
   render() {
     const facilityStore = FacilityStore
     const {elderStatuses}= facilityStore;
-    
+    const option = {
+      plugins :{
+        tooltip :{
+          callbacks :{
+            label : function(context) {
+
+            }
+          }
+        }
+      },
+      scales : {
+        y : {
+          ticks : {
+            callback : function(value) {
+              return (value === 3) ? 'Empty' : (value === 2) ? 'Sit' : 'Lay'
+            }
+          }
+        }
+      }
+    }
+
     let test_list =['lay','empty','sit']
 
 

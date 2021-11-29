@@ -54,13 +54,13 @@ export default function EldersDetailView() {
 
               <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                   주의사항 : {elder.recent_problem} 
-              </Typography> <br/>
+              </Typography> <br/><br/>
  
-                  <Button fullWidth onClick={()=>goBack()} >Exit</Button>
-                  <Box>
+              <Box>
               <StatusGraphViewM />
-              </Box>
-           
+              </Box> <br/><br/>
+                  <Button fullWidth onClick={()=>goBack()} >Exit</Button>
+
 
 
         </div>

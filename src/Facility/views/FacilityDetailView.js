@@ -45,7 +45,7 @@ export default function FacilityDetailView() {
   const { elders, room, goElderDetail , selectElderDetail, violenceList} = facilityStore
   const elderList = elders.map(elder => {
     return (
-      <Grid key={elder.id} xs={12} sm={6} md={4} onClick={handleOpen}>
+      <Grid key={elder.id} xs={10} onClick={handleOpen}>
               <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} onClick={() => selectElderDetail(elder)}> 
 
                           {/* sx={{ flexGrow: 1 }} */}

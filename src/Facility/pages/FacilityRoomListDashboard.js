@@ -19,22 +19,22 @@ const FacilityRoomListDashboard = () => (
       sx={{
         backgroundColor: 'background.default',
         minHeight: '100%',
-        py: 3
+        py: 2
       }}
     >
       <Container maxWidth={false}>
 
-        <Grid container spacing={3}>
+        <Grid container spacing={4}>
 
           <Grid item xs={2} sm={2}>
           <FacilityRoomListContainer />
           </Grid>
           
-          <Grid item xs={6} sm={6}>
+          <Grid item xs={5} sm={4}>
           <FacilityDetailContainer/>
           </Grid>
 
-          <Grid item xs={4} sm={4}>
+          <Grid item xs={5} sm={6}>
           <ViolenceGraphContainer/>
           </Grid>
 

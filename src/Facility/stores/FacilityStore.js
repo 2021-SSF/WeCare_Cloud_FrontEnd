@@ -33,7 +33,6 @@ class FacilityStore {
                 try {
                         const results = await FacilityApi.facilityRoomList();
                         runInAction(() => this.rooms = results) //병실 리스트 
-                        console.log(results)
                 } catch (error) {
                         console.log(error)
                 }
@@ -45,7 +44,6 @@ class FacilityStore {
                         // this.room.id = room_id;
                         const results = await FacilityApi.facilityDetail(room.id);
                         runInAction(() => this.elders = results)
-                        console.log(results)
                 } catch (error) {
                         console.log(error)
                 }
@@ -56,7 +54,6 @@ class FacilityStore {
                 try {
                         const result = await FacilityApi.elderDetail(elder.id);
                         runInAction(() => this.elder = result)
-                        console.log(result)
                 } catch (error) {
                         console.log(error)
                 }
@@ -66,8 +63,6 @@ class FacilityStore {
         async getElderStatus(elder){
                 // 환자 상태 정보
                 try{
-                        console.log(this.elder.id)
-                        console.log("test_getElderSTuat")
                         const status = await FacilityApi.elderStatus(this.elder.id)
                         runInAction(() => this.elderStatuses = status)
                         
@@ -79,11 +74,8 @@ class FacilityStore {
         async getViolence(room){
                 // 방별 폭력 그래프
                 try{    
-                        console.log("룸아이디는 ====>", room.id)
                         const fight = await FacilityApi.incidentList(room.id)
                         runInAction(() => this.violenceList = fight)
-                        console.log(fight)
-
                 }catch(error){
                         console.log(error);
                 }
